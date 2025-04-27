@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirador Yóguico: Ideas para Redes Sociales</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        /* Paleta de colores cálidos y espirituales */
+        :root {
+            --primary-color: #E57373; /* Coral suave */
+            --secondary-color: #FFB74D; /* Naranja cálido */
+            --accent-color: #81C784; /* Verde suave */
+            --text-color: #4E342E; /* Marrón oscuro */
+            --bg-color: #FFF8E1; /* Crema muy claro */
+            --card-bg: #FFFFFF;
+            --footer-bg: #D7CCC8; /* Marrón claro */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-color); /* Fondo general */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: var(--bg-color); /* Ensure body bg matches html */
+            -webkit-font-smoothing: antialiased; /* Improve font rendering */
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .hero.is-primary {
+            background-color: var(--primary-color);
+            background-image: linear-gradient(141deg, var(--primary-color) 0%, var(--secondary-color) 71%, var(--accent-color) 100%);
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .hero .title, .hero .subtitle {
+            color: white;
+        }
+
+        .section {
+            padding: 2rem 1.5rem;
+        }
+
+        .main-content {
+            flex: 1;
+            width: 100%; /* Ensure it takes full width */
+            max-width: 1200px; /* Optional: Max width for very large screens */
+            margin: 0 auto; /* Center the content */
+            padding-bottom: 4rem;
+        }
+
+        .box.inspiration-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(78, 52, 46, 0.1);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow-wrap: break-word; /* Prevent long words from overflowing */
+            word-wrap: break-word;
+        }
+
+        .box.inspiration-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(78, 52, 46, 0.15);
+        }
+
+        .inspiration-card h3.title {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .inspiration-card h4.subtitle {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1em;
+        }
+
+        .inspiration-card p {
+            margin-bottom: 0.75rem;
+        }
+
+         .inspiration-card .tags .tag {
+            background-color: var(--accent-color);
+            color: white;
+            margin-right: 0.3rem;
+            margin-bottom: 0.3rem;
+            border-radius: 12px;
+        }
+
+        .inspiration-card .tags .tag:hover {
+            background-color: #66BB6A;
+        }
+
+        .control-panel {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(78, 52, 46, 0.08);
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .control-panel .field {
+             margin-bottom: 0; /* Remove default bottom margin for fields in flex */
+        }
+
+        .control-panel .select select {
+            border-color: var(--secondary-color);
+        }
+        .control-panel .select:not(.is-multiple):not(.is-loading)::after {
+            border-color: var(--secondary-color);
+        }
+
+        .button.is-primary {
+            background-color: var(--primary-color);
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .button.is-primary:hover {
+            background-color: #D32F2F;
+        }
+
+        .button.is-info {
+            background-color: var(--secondary-color);
+            border: none;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+        .button.is-info:hover {
+            background-color: #FB8C00;
+        }
+         .button.is-info:disabled {
+            background-color: #FFCC80;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .yogi-quote {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            font-style: italic;
+            box-shadow: 0 4px 8px rgba(78, 52, 46, 0.1);
+        }
+        .yogi-quote p {
+            margin-bottom: 0.2rem;
+            font-size: 1.1em;
+        }
+        .yogi-quote cite {
+             display: block;
+             margin-top: 0.5rem;
+             font-size: 0.9em;
+             font-style: normal;
+        }
+
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 2rem 1.5rem;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        /* Estilos para la notificación */
+        #notificationArea {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            width: 90%; /* Adjust width for mobile */
+            max-width: 400px; /* Max width on larger screens */
+        }
+
+        /* Clases para PDF (ocultas por defecto en web) */
+        .pdf-title {
+            display: none; /* Oculto en la web */
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        /* Ensure content within PDF is visible */
+        .pdf-export-prepare .inspiration-card {
+             display: block !important; /* Ensure cards are block for PDF */
+             visibility: visible !important; /* Ensure visibility */
+             opacity: 1 !important; /* Ensure full opacity */
+             animation: none !important; /* Disable animations for PDF */
+        }
+
+
+        /* Media query para Responsividad Móvil */
+        @media screen and (max-width: 768px) {
+            .hero .title {
+                font-size: 1.8em; /* Reducir tamaño título */
+            }
+            .hero .subtitle {
+                font-size: 1em; /* Reducir tamaño subtítulo */
+            }
+            .control-panel {
+                flex-direction: column; /* Apilar elementos verticalmente */
+                align-items: stretch; /* Estirar elementos al ancho completo */
+                gap: 0.75rem; /* Reducir espacio entre elementos apilados */
+            }
+            .control-panel .field,
+            .control-panel .field .control,
+            .control-panel .select,
+            .control-panel select,
+            .control-panel button {
+                 width: 100%; /* Hacer que todos los controles ocupen el ancho */
+            }
+            .control-panel .field.is-grouped {
+                flex-direction: column; /* Apilar botones también */
+                width: 100%;
+            }
+             .control-panel .field.is-grouped .control {
+                 width: 100%; /* Ancho completo para controles agrupados */
+            }
+             .control-panel .field.is-grouped .control:not(:last-child) {
+                  margin-bottom: 0.75rem; /* Espacio entre botones apilados */
+             }
+
+            .section {
+                padding: 1.5rem 1rem; /* Reducir padding en móvil */
+            }
+
+            #notificationArea {
+                top: 0.5rem;
+                right: 0.5rem;
+                left: 0.5rem; /* Center notification slightly */
+                width: auto; /* Allow it to size based on content */
+            }
+        }
+         @media screen and (max-width: 480px) {
+             .hero .title {
+                 font-size: 1.6em;
+             }
+             .hero .subtitle {
+                 font-size: 0.9em;
+             }
+              .inspiration-card h3.title {
+                 font-size: 1.3em;
+             }
+             .inspiration-card h4.subtitle {
+                 font-size: 1em;
+             }
+         }
+    </style>
+</head>
+<body>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-size-1">
+                    🧘 Inspirador Yóguico 🧘
+                </h1>
+                <h2 class="subtitle is-size-4">
+                    Genera ideas frescas para tus redes sociales basadas en tendencias y sabiduría ancestral.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <section class="section">
+            <div class="container">
+
+                <div class="control-panel">
+                    <div class="field">
+                        <label class="label has-text-centered" for="quantitySelect" style="color: var(--text-color);">¿Cuántas inspiraciones deseas?</label>
+                        <div class="control has-icons-left">
+                            <div class="select is-rounded is-medium is-fullwidth"> <select id="quantitySelect" aria-label="Seleccionar cantidad de inspiraciones">
+                                    <option value="3">3 Ideas</option>
+                                    <option value="5" selected>5 Ideas</option>
+                                    <option value="7">7 Ideas</option>
+                                </select>
+                            </div>
+                            <span class="icon is-left">
+                                ✨
+                            </span>
+                        </div>
+                    </div>
+                     <div class="field is-grouped is-grouped-centered">
+                        <div class="control">
+                            <button id="generateBtn" class="button is-primary is-medium is-rounded">
+                                <span class="icon">
+                                    💡
+                                </span>
+                                <span>Generar Inspiraciones</span>
+                            </button>
+                        </div>
+                        <div class="control">
+                            <button id="exportBtn" class="button is-info is-medium is-rounded" disabled>
+                                <span class="icon">
+                                    📄
+                                </span>
+                                <span>Exportar a PDF</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="notificationArea" style="display: none;">
+                    <div class="notification">
+                        <button class="delete"></button>
+                        <span id="notificationMessage"></span>
+                    </div>
+                </div>
+
+                <div id="inspirationsContainerWrapper">
+                     <h1 class="title is-2 pdf-title">Inspiraciones Yóguicas para Redes Sociales</h1>
+                     <div id="inspirationsContainer">
+                        <p class="has-text-centered" style="color: var(--text-color);">Selecciona la cantidad de ideas y haz clic en "Generar Inspiraciones" para comenzar.</p>
+                    </div>
+                </div>
+
+
+                <div id="quoteContainer" class="yogi-quote">
+                    </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Creado con ❤️ por un compañero del camino yóguico. <br>
+                Estilo por <a href="https://bulma.io" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">Bulma</a>, Animaciones por <a href="https://animate.style/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">Animate.css</a>.
+            </p>
+            <p id="currentYear"></p>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATOS: TEMAS DE YOGA ---
+        // (Data remains the same as previous version)
+        const yogaThemes = [
+            { id: 1, title: "Introducción a los Chakras", description: "Explora los 7 centros energéticos principales del cuerpo.", angle: "Cómo equilibrar tu energía diaria identificando tus chakras dominantes y bloqueados.", hashtags: "#chakras #energiavital #equilibriointerior #yogaenespañol #bienestarintegral #yogalatino", visualFormat: "Infografía colorida o serie de Reels cortos (uno por chakra).", hook: "¿Sientes bloqueos en tu vida? ¡Podrían ser tus chakras!", post: "Los chakras son vórtices de energía en nuestro cuerpo sutil. Desde la raíz (Muladhara) que nos conecta a la tierra, hasta la corona (Sahasrara) que nos une a lo divino, cada uno influye en nuestro bienestar físico y emocional. Aprender a identificarlos y equilibrarlos a través del yoga y la meditación puede transformar tu vida, liberando bloqueos y potenciando tu vitalidad. ¿Con cuál chakra resuenas más hoy? ¡Explora tu universo interior!" },
+            { id: 2, title: "Posturas (Asanas) para Principiantes", description: "Fundamentos de las posturas básicas de yoga.", angle: "5 posturas esenciales que cualquier persona puede hacer para empezar su práctica de yoga hoy mismo.", hashtags: "#yogaparaprincipiantes #asanasbasicas #posturasdeyoga #practicadiaria #flexibilidad #iniciacionyoga", visualFormat: "Carrusel de Instagram con fotos claras y descripción paso a paso, o video corto demostrativo.", hook: "¡Despierta tu cuerpo! 5 posturas de yoga para iniciar tu camino.", post: "Iniciar en el yoga es un regalo para tu cuerpo y mente. Comienza con posturas fundamentales como Tadasana (Montaña) para encontrar tu centro, Adho Mukha Svanasana (Perro Boca Abajo) para energizarte, y Balasana (Niño) para relajarte. Estas asanas construyen fuerza, flexibilidad y consciencia corporal. Recuerda: el yoga no es perfección, es conexión. Respira profundo en cada postura y disfruta el proceso. ¡Tu mat te espera con amor!" },
+            { id: 3, title: "Pranayama: El Poder de la Respiración", description: "Técnicas de respiración yóguica y sus beneficios.", angle: "Una técnica de Pranayama simple para calmar la ansiedad en menos de 5 minutos.", hashtags: "#pranayama #respiracionconsciente #calmamental #manejodelestres #yogaRespiracion #pazinterior", visualFormat: "Video corto (Reel/TikTok) guiando la técnica, o post estático con instrucciones claras.", hook: "¿Ansiedad? ¡Respira así y siente la calma al instante!", post: "Tu respiración es la herramienta más poderosa y accesible para gestionar tu estado interior. El Pranayama Nadi Shodhana (Respiración Alterna) equilibra los hemisferios cerebrales, calma el sistema nervioso y reduce la ansiedad rápidamente. Siéntate cómodamente, cierra suavemente tus ojos y sigue el flujo del aire. Dedica solo unos minutos al día a esta práctica y notarás una profunda diferencia en tu claridad mental y paz interior. ¡Inhala calma, exhala tensión!" },
+            { id: 4, title: "Meditación Mindfulness para el Día a Día", description: "Introducción a la meditación de atención plena.", angle: "Cómo integrar micro-meditaciones de 1 minuto en tu rutina diaria para reducir el estrés.", hashtags: "#meditacionmindfulness #atencionplena #momentopresente #pazinterior #mindfulnessdiario #vidaconsciente", visualFormat: "Audio corto (Story/Reel) con una guía de micro-meditación, o un post gráfico con tips.", hook: "¿Sin tiempo para meditar? ¡Prueba esto por 60 segundos!", post: "La meditación no requiere horas. Integra la atención plena en momentos cotidianos: mientras tomas tu café, caminas o esperas. Enfócate en tus sentidos: ¿qué ves, hueles, sientes? Observa tu respiración por un minuto. Estos instantes de mindfulness te anclan al presente, reduciendo el ruido mental y cultivando una calma profunda que te acompaña durante el día. Pequeños momentos, grandes cambios. ¿Dónde practicarás tu minuto de paz hoy?" },
+            { id: 5, title: "Ayurveda y Doshas: Conócete a Ti Mismo", description: "Principios básicos de Ayurveda y los tres doshas (Vata, Pitta, Kapha).", angle: "Descubre tu dosha dominante y cómo equilibrarlo con hábitos simples de alimentación y estilo de vida.", hashtags: "#ayurveda #doshas #vata #pitta #kapha #medicinaindia #autoconocimiento #sabiduriaancestral", visualFormat: "Quiz interactivo en Stories, carrusel explicando cada dosha, o infografía comparativa.", hook: "¿Eres Vata, Pitta o Kapha? ¡Descubre tu naturaleza ayurvédica!", post: "Ayurveda, la ciencia hermana del yoga, nos enseña que cada persona tiene una constitución única (Prakriti) definida por los doshas: Vata (aire/éter), Pitta (fuego/agua) y Kapha (tierra/agua). Conocer tu dosha dominante te permite entender tus tendencias naturales y cómo mantener el equilibrio (Vikriti). Pequeños ajustes en tu dieta y rutina, alineados con tu naturaleza, pueden mejorar drásticamente tu salud y bienestar general. ¡Abraza tu constitución única con sabiduría!" },
+            { id: 6, title: "Filosofía del Yoga: Yamas y Niyamas", description: "Principios éticos y observancias personales en el camino del yoga.", angle: "Cómo aplicar 'Ahimsa' (No Violencia) en tus pensamientos, palabras y acciones diarias.", hashtags: "#filosofiayoga #yamasniyamas #ahimsa #yogaetico #crecimientopersonal #sutras #vidaconsciente", visualFormat: "Post reflexivo con una cita inspiradora, o un video corto explicando el concepto con ejemplos prácticos.", hook: "Transforma tu vida desde adentro: El poder de la 'No Violencia' yóguica.", post: "El yoga va mucho más allá del mat. Los Yamas (principios éticos sociales) y Niyamas (observancias personales) son guías para vivir con consciencia plena. Ahimsa, el primero de los Yamas, nos invita a practicar la no violencia no solo en acciones, sino también en palabras y pensamientos, hacia nosotros mismos y los demás. Cultivar la compasión, la empatía y el respeto en cada interacción diaria crea un impacto positivo profundo. ¿Cómo puedes practicar Ahimsa hoy mismo?" },
+            { id: 7, title: "Anatomía Sutil: Nadis y Prana", description: "Exploración de los canales energéticos (Nadis) y la fuerza vital (Prana).", angle: "Visualización guiada para sentir el flujo de Prana a través de los principales Nadis (Ida, Pingala, Sushumna).", hashtags: "#anatomiasutil #nadis #prana #energiavital #yogayenergia #ida #pingala #sushumna #cuerposutil", visualFormat: "Video con meditación guiada (fondo relajante), o post con ilustración de los Nadis y explicación.", hook: "Siente tu energía vital: ¡Conecta con tus canales sutiles!", post: "Más allá de músculos y huesos, existe una anatomía sutil fascinante. Los Nadis son canales por donde fluye el Prana, nuestra fuerza vital esencial. Ida (lunar, femenino, calmante) y Pingala (solar, masculino, energizante) serpentean alrededor de Sushumna, el canal central que asciende por la columna vertebral. Equilibrar estos canales mediante pranayama y meditación despierta nuestro potencial energético y espiritual. Cierra los ojos, respira profundo y siente el sutil flujo de vida dentro de ti." },
+            { id: 8, title: "Yoga Sutras de Patanjali: Introducción", description: "Visión general del texto fundamental de la filosofía del Yoga.", angle: "El Sutra clave 'Yogas Chitta Vritti Nirodhah' explicado de forma sencilla para la vida moderna.", hashtags: "#yogasutras #patanjali #filosofiayoga #calmamental #controldelamente #sabiduriaantigua #yogaenesencia", visualFormat: "Post gráfico con el sutra en sánscrito y su traducción/explicación, o Reel corto discutiendo su relevancia.", hook: "¿Mente inquieta? La clave milenaria del Yoga para la calma.", post: "Los Yoga Sutras de Patanjali son un mapa invaluable hacia la liberación interior. El famoso sutra 1.2, 'Yogas Chitta Vritti Nirodhah', define el yoga como 'el cese de las fluctuaciones de la mente'. En nuestro mundo acelerado, esta enseñanza es vital. La práctica nos ayuda a observar nuestros pensamientos sin identificarnos con ellos, encontrando un espacio de quietud interior. No se trata de detener la mente, sino de no ser arrastrado por sus torbellinos. Paz en la mente, paz en la vida." },
+            { id: 9, title: "Yoga Restaurativo: Descanso Profundo", description: "Posturas suaves y sostenidas para la relajación y recuperación.", angle: "Secuencia corta de Yoga Restaurativo para liberar tensión después de un día largo.", hashtags: "#yogarestaurativo #descansoprofundo #relajaciontotal #antiestres #bienestaremocional #autocuidado", visualFormat: "Video suave y lento mostrando la secuencia con música relajante, o carrusel con fotos y props (cojines, mantas).", hook: "Regálate un respiro: ¡Relajación profunda con Yoga Restaurativo!", post: "En un mundo que glorifica la actividad constante, el descanso consciente es un acto revolucionario de amor propio. El Yoga Restaurativo utiliza soportes (props) para sostener el cuerpo en posturas cómodas durante varios minutos. Esto permite que el sistema nervioso pase del modo 'lucha o huida' al modo 'descanso y digestión', facilitando una relajación profunda, sanación y rejuvenecimiento integral. Una simple postura como Viparita Karani (piernas en la pared) puede hacer maravillas. ¡Permítete soltar y recibir!" },
+            { id: 10, title: "Saludos al Sol (Surya Namaskar): Fluir con Energía", description: "Secuencia dinámica para empezar el día.", angle: "Los beneficios energéticos y físicos de practicar 5 rondas de Saludos al Sol cada mañana.", hashtags: "#suryanamaskar #saludoalsol #yogafluido #energiamañanera #practicayoga #vinyasa #rutinamatutina", visualFormat: "Video Time-lapse o Real-time de la secuencia, o infografía mostrando las posturas y la respiración.", hook: "¡Empieza tu día con sol! El poder de Surya Namaskar.", post: "Surya Namaskar, el Saludo al Sol, es una secuencia clásica que honra la energía vital del sol y de nuestro interior. Es una práctica completa en sí misma: calienta el cuerpo, sincroniza respiración y movimiento (vinyasa), mejora la circulación y flexibiliza la columna vertebral. Practicarla por la mañana despierta cuerpo y mente, llenándote de vitalidad para el día. Dedica unos minutos a fluir con esta danza sagrada y siente cómo tu energía se eleva. ¡Namaste al nuevo día!" },
+            { id: 11, title: "Yoga para la Espalda: Alivio y Fortaleza", description: "Posturas específicas para mejorar la salud de la columna.", angle: "3 Asanas seguras y efectivas para aliviar el dolor lumbar causado por estar sentado.", hashtags: "#yogaparaespalda #dolordeespalda #columnavertebral #saludpostural #aliviodeldolor #bienestarcorporal", visualFormat: "Video corto demostrando las posturas con énfasis en la alineación correcta, o carrusel detallado.", hook: "¿Dolor de espalda por la oficina? ¡El yoga te rescata!", post: "Nuestra columna vertebral es el eje de nuestro bienestar físico y energético. El sedentarismo y las malas posturas pueden causar rigidez y dolor. El yoga ofrece herramientas maravillosas para cuidar tu espalda. Posturas como Marjaryasana-Bitilasana (Gato-Vaca) para movilizar, Setu Bandhasana (Puente) para fortalecer, y Supta Matsyendrasana (Torsión Supina) para liberar tensión, pueden marcar una gran diferencia. Muévete con consciencia, respira profundo y regálale salud y amor a tu columna." },
+            { id: 12, title: "Mudras: Gestos Sagrados con las Manos", description: "El significado y uso de los mudras en la práctica yóguica.", angle: "Jnana Mudra (Gesto del Conocimiento): Cómo usarlo para mejorar la concentración en la meditación.", hashtags: "#mudras #gestossagrados #yogaconmanos #concentracion #meditacionguiada #energiauniversal #poderinterior", visualFormat: "Foto de las manos en el mudra con explicación, o Reel corto guiando su práctica y beneficios.", hook: "El poder en tus manos: ¡Descubre los Mudras!", post: "Los Mudras son gestos realizados con las manos que dirigen y sellan el flujo de energía (prana) en el cuerpo. Jnana Mudra, uniendo pulgar e índice, simboliza la unión de la conciencia individual (índice) con la conciencia universal (pulgar). Practicarlo durante la meditación ayuda a calmar la mente, mejorar la concentración y profundizar la introspección. Prueba sentarte en silencio, adoptar este mudra con suavidad y observar la sutil pero poderosa diferencia. La sabiduría está en tus manos." },
+            { id: 13, title: "Yoga Nidra: El Sueño Consciente", description: "Técnica de relajación profunda guiada.", angle: "Experimenta los beneficios de 20 minutos de Yoga Nidra (equivalente a horas de sueño reparador).", hashtags: "#yoganidra #sueñoconsciente #relajacionprofunda #sanacion #descansoreparador #meditacionprofunda #resetmental", visualFormat: "Audio guiado de una sesión corta de Yoga Nidra (ideal para Stories o como podcast corto), o post explicando qué es.", hook: "¿Necesitas un reset total? ¡Prueba el Yoga Nidra!", post: "Yoga Nidra, o 'sueño yóguico', es una poderosa técnica de meditación guiada que induce un estado de relajación profunda entre la vigilia y el sueño. Permite que el cuerpo descanse completamente mientras la mente permanece alerta y consciente, facilitando la liberación de tensiones profundas. Es increíblemente efectivo para reducir el estrés acumulado, mejorar la calidad del sueño, procesar emociones y reprogramar patrones mentales limitantes. Una sesión corta puede dejarte sintiéndote profundamente renovado. ¡Date permiso para descansar así!" },
+            { id: 14, title: "Mantras: Vibraciones Sagradas", description: "El uso de sonidos y cantos en el yoga.", angle: "El significado y poder del mantra 'Om': Cómo usarlo para conectar con la vibración universal.", hashtags: "#mantras #om #sonidosagrado #vibracionuniversal #meditacionconsonido #yogaymantras #japa", visualFormat: "Video corto cantando Om con explicación, o post gráfico con el símbolo Om y su significado.", hook: "Siente la vibración del universo: ¡El poder del OM!", post: "Los Mantras son sonidos o palabras sagradas cargadas de energía que, al repetirse (Japa), calman la mente y elevan nuestra vibración. 'Om' (o AUM) es considerado el sonido primordial, la vibración misma de la creación y la existencia. Cantarlo nos conecta con esa fuente universal, armonizando nuestro ser a nivel físico, mental y energético. Al entonar A-U-M, siente la vibración resonando en tu cuerpo y permite que te lleve a un estado de paz y unidad profunda." },
+            { id: 15, title: "Yoga en Pareja (Acroyoga Básico)", description: "Posturas divertidas y de conexión para practicar con un compañero.", angle: "3 posturas simples de yoga en pareja para fortalecer la confianza y la conexión.", hashtags: "#yogaenpareja #acroyogabasico #conexion #confianza #yogadivertido #partneryoga #juegoyoga", visualFormat: "Carrusel con fotos de las posturas y tips de seguridad, o video corto mostrando la dinámica.", hook: "¡Conecta y diviértete! Yoga para dos.", post: "Practicar yoga con un compañero añade una dimensión maravillosa de confianza, comunicación no verbal y juego compartido. No tiene que ser acrobático complejo para ser significativo. Posturas simples como la 'Doble Torsión Sentada' o el 'Doble Árbol' fomentan el apoyo mutuo, la escucha corporal activa y la co-creación del equilibrio. Es una forma hermosa de profundizar la conexión, ya sea con tu pareja, un amigo o familiar. Respiren juntos, encuentren el equilibrio y disfruten de la energía compartida." },
+            { id: 16, title: "Medicina en el Yoga: Aplicaciones Terapéuticas", description: "Cómo el yoga puede complementar tratamientos médicos.", angle: "Yoga suave como apoyo para gestionar el estrés y la ansiedad en condiciones crónicas.", hashtags: "#yogaterapeutico #medicinanatural #bienestarintegral #manejodelestres #saludholistica #yogaessalud #yogacomplementario", visualFormat: "Post informativo citando estudios (si es posible) o testimonio (anónimo/general), o Reel corto con ejercicios suaves.", hook: "Yoga como medicina: ¿Cómo puede ayudarte en tu salud?", post: "El Yoga Terapéutico adapta las prácticas yóguicas a necesidades específicas de salud, funcionando como un excelente complemento a tratamientos médicos convencionales. Para condiciones crónicas, manejo del estrés o recuperación, técnicas como la respiración consciente, posturas suaves y adaptadas, y meditación pueden aliviar síntomas, mejorar el estado de ánimo y empoderar al individuo en su proceso de sanación integral. Siempre consulta con tu médico y busca un profesor cualificado. El yoga puede ser un aliado invaluable en tu camino." }
+        ];
+
+        // --- DATOS: FRASES YOGUI ---
+        // (Data remains the same as previous version)
+        const yogiQuotes = [
+            { quote: "El yoga es la práctica de aquietar la mente.", author: "Patanjali" },
+            { quote: "La naturaleza del yoga es hacer brillar la luz de la conciencia en los rincones más oscuros del cuerpo.", author: "B.K.S. Iyengar" },
+            { quote: "Tu cuerpo existe en el pasado y tu mente en el futuro. En el yoga, ambos se unen en el presente.", author: "B.K.S. Iyengar" },
+            { quote: "La respiración es el puente que conecta la vida con la conciencia.", author: "Thich Nhat Hanh" },
+            { quote: "El yoga no nos cambia, nos devuelve a quienes realmente somos.", author: "Anónimo" },
+            { quote: "Sé amable contigo mismo. Estás haciendo lo mejor que puedes.", author: "Anónimo" },
+            { quote: "La postura que más temes es la que más necesitas.", author: "Anónimo" },
+            { quote: "El yoga es 99% práctica y 1% teoría.", author: "Sri K. Pattabhi Jois" },
+            { quote: "La paz viene de adentro. No la busques afuera.", author: "Buda" },
+            { quote: "En la quietud reside la fuerza.", author: "Proverbio Zen" },
+            { quote: "El yoga es un espejo para mirarnos a nosotros mismos desde adentro.", author: "B.K.S. Iyengar" },
+            { quote: "Cuida tu cuerpo, es el único lugar que tienes para vivir.", author: "Jim Rohn (aplicable al yoga)" },
+            { quote: "La flexibilidad que ganas en el mat es la flexibilidad que ganas en la vida.", author: "Anónimo" },
+            { quote: "Inhala el futuro, exhala el pasado.", author: "Anónimo" },
+            { quote: "El yoga es la unión del cuerpo, la mente y el espíritu.", author: "Definición Clásica" },
+            { quote: "Donde quiera que vayas, ve con todo tu corazón.", author: "Confucio (aplicable al yoga)" },
+            { quote: "El regalo más grande que puedes dar a otros es el de tu propia transformación.", author: "Lao Tzu (aplicable al yoga)" }
+        ];
+
+        // --- REFERENCIAS AL DOM ---
+        const quantitySelect = document.getElementById('quantitySelect');
+        const generateBtn = document.getElementById('generateBtn');
+        const exportBtn = document.getElementById('exportBtn');
+        const inspirationsContainer = document.getElementById('inspirationsContainer');
+        const inspirationsContainerWrapper = document.getElementById('inspirationsContainerWrapper');
+        const quoteContainer = document.getElementById('quoteContainer');
+        const notificationArea = document.getElementById('notificationArea');
+        const notificationMessage = document.getElementById('notificationMessage');
+        const notificationBox = notificationArea.querySelector('.notification');
+        const notificationDeleteBtn = notificationArea.querySelector('.delete');
+        const currentYearSpan = document.getElementById('currentYear');
+
+        // --- FUNCIONES AUXILIARES ---
+
+        /**
+         * Gets a specified number of unique random items from an array.
+         * @param {Array} arr - The array to select items from.
+         * @param {number} num - The number of random items to get.
+         * @returns {Array} An array containing the randomly selected items.
+         */
+        function getRandomItems(arr, num) {
+            const shuffled = [...arr].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, Math.min(num, arr.length));
+        }
+
+        /**
+         * Shows an animated notification.
+         * @param {string} message - The message to display.
+         * @param {string} [type='is-success'] - Notification type (Bulma class).
+         * @param {number} [duration=4000] - Duration in ms before auto-hide.
+         */
+        function showNotification(message, type = 'is-success', duration = 4000) {
+            notificationMessage.textContent = message;
+            notificationBox.className = `notification ${type}`; // Base + type class
+
+            notificationArea.style.display = 'block';
+            // Add animation classes (ensure removal first if reusing)
+            notificationBox.classList.remove('animate__fadeInRight', 'animate__fadeOutRight');
+            notificationBox.classList.add('animate__animated', 'animate__fadeInRight');
+
+            // Clear previous timeout if any
+            if (notificationBox.hideTimeout) {
+                clearTimeout(notificationBox.hideTimeout);
+            }
+
+            // Auto-hide
+            notificationBox.hideTimeout = setTimeout(() => {
+                hideNotification();
+            }, duration);
+        }
+
+         /**
+          * Hides the notification with animation.
+          */
+        function hideNotification() {
+            if (notificationArea.style.display === 'none') return;
+
+            notificationBox.classList.remove('animate__fadeInRight');
+            notificationBox.classList.add('animate__animated', 'animate__fadeOutRight');
+
+            // Wait for animation to finish before hiding
+            setTimeout(() => {
+                notificationArea.style.display = 'none';
+                notificationBox.classList.remove('animate__fadeOutRight'); // Clean up class
+                 if (notificationBox.hideTimeout) {
+                    clearTimeout(notificationBox.hideTimeout); // Clear timeout just in case
+                    notificationBox.hideTimeout = null;
+                 }
+            }, 500); // Match animation duration
+        }
+
+        // Add listener to the notification delete button
+        if (notificationDeleteBtn) {
+            notificationDeleteBtn.addEventListener('click', hideNotification);
+        }
+
+        // --- LÓGICA PRINCIPAL ---
+
+        /**
+         * Displays the generated inspirations in the HTML container.
+         * @param {Array<object>} inspirations - Array of selected yoga theme objects.
+         */
+        function displayInspirations(inspirations) {
+            inspirationsContainer.innerHTML = ''; // Clear previous content
+            inspirationsContainer.classList.remove('animate__animated', 'animate__fadeInUp'); // Clear previous animation class
+
+            if (inspirations.length === 0) {
+                inspirationsContainer.innerHTML = '<p class="has-text-centered">No se generaron inspiraciones. Intenta de nuevo.</p>';
+                return;
+            }
+
+            // Create and append a card for each inspiration
+            inspirations.forEach((theme, index) => {
+                const card = document.createElement('div');
+                // Add Bulma and Animate.css classes with staggered delay
+                card.className = 'box inspiration-card animate__animated animate__fadeInUp';
+                card.style.animationDelay = `${index * 0.1}s`;
+
+                card.innerHTML = `
+                    <h3 class="title is-4">${theme.title}</h3>
+                    <h4 class="subtitle is-6">Ángulo Narrativo:</h4>
+                    <p>${theme.angle}</p>
+                    <h4 class="subtitle is-6">Gancho Verbal:</h4>
+                    <p><em>"${theme.hook}"</em></p>
+                    <h4 class="subtitle is-6">Formato Visual Sugerido:</h4>
+                    <p>${theme.visualFormat}</p>
+                    <h4 class="subtitle is-6">Post Relacionado (~70-80 palabras):</h4>
+                    <div class="content">
+                        <p>${theme.post}</p>
+                    </div>
+                    <h4 class="subtitle is-6">Hashtags:</h4>
+                    <div class="tags">
+                        ${theme.hashtags.split(' ').map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+                inspirationsContainer.appendChild(card);
+            });
+        }
+
+        /**
+         * Selects and displays a random yogi quote.
+         */
+        function displayYogiQuote() {
+            const randomQuote = yogiQuotes[Math.floor(Math.random() * yogiQuotes.length)];
+            quoteContainer.innerHTML = `
+                <p>"${randomQuote.quote}"</p>
+                <cite>- ${randomQuote.author}</cite>
+            `;
+            // Re-apply animation class for visual feedback
+            quoteContainer.classList.remove('animate__fadeInUp');
+            void quoteContainer.offsetWidth; // Force reflow to restart animation
+            quoteContainer.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+
+        /**
+         * Main function executed when "Generate Inspirations" is clicked.
+         */
+        function generateInspirations() {
+            const quantity = parseInt(quantitySelect.value, 10);
+
+            if (yogaThemes.length < quantity) {
+                 showNotification('Advertencia: No hay suficientes temas únicos para la cantidad seleccionada.', 'is-warning');
+                 // Continue generating with available themes
+            }
+
+            const selectedInspirations = getRandomItems(yogaThemes, quantity);
+            displayInspirations(selectedInspirations);
+            displayYogiQuote(); // Display a new quote each time
+
+            exportBtn.disabled = selectedInspirations.length === 0; // Disable export if nothing generated
+
+            if (selectedInspirations.length > 0) {
+                showNotification(`¡${selectedInspirations.length} nuevas inspiraciones generadas!`, 'is-success');
+                // Scroll smoothly to the generated content
+                inspirationsContainerWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        /**
+         * Function executed when "Export to PDF" is clicked.
+         */
+        function exportToPdf() {
+             if (inspirationsContainer.children.length === 0 || inspirationsContainer.textContent.includes('para comenzar')) {
+                 showNotification('Primero genera algunas inspiraciones para poder exportar.', 'is-warning');
+                 return;
+            }
+
+            const currentDate = new Date();
+            const day = String(currentDate.getDate()).padStart(2, '0');
+            const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+            const year = currentDate.getFullYear();
+            const filename = `Inspiraciones_Yoga_${day}-${month}-${year}.pdf`;
+
+            const elementToExport = inspirationsContainerWrapper;
+            const pdfTitleElement = elementToExport.querySelector('.pdf-title');
+
+            // --- Prepare for PDF export ---
+            // 1. Make title visible
+            if (pdfTitleElement) pdfTitleElement.style.display = 'block';
+            // 2. Add a class to the wrapper to temporarily disable animations / ensure visibility for PDF generation
+            elementToExport.classList.add('pdf-export-prepare');
+
+
+            // --- html2pdf options ---
+            const opt = {
+              margin:       [15, 10, 15, 10], // [top, left, bottom, right] in mm
+              filename:     filename,
+              image:        { type: 'jpeg', quality: 0.98 },
+              html2canvas:  {
+                  scale: 2, // Better resolution
+                  useCORS: true,
+                  logging: false,
+                  // Attempt to capture elements even if slightly off-screen
+                  // windowWidth: elementToExport.scrollWidth,
+                  // windowHeight: elementToExport.scrollHeight
+              },
+              jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+              // Try to avoid breaking cards across pages
+              pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            // Disable button and show progress
+            exportBtn.disabled = true;
+            exportBtn.innerHTML = `<span class="icon">⏳</span><span>Generando PDF...</span>`;
+
+            // --- Generate PDF ---
+            html2pdf().set(opt).from(elementToExport).save()
+                .then(() => {
+                    showNotification(`PDF "${filename}" generado correctamente.`, 'is-success');
+                })
+                .catch(err => {
+                    showNotification(`Error al generar el PDF: ${err.message || err}`, 'is-danger', 6000);
+                    console.error("Error generando PDF:", err);
+                })
+                .finally(() => {
+                    // --- Clean up after PDF export ---
+                    // 1. Hide title again
+                    if (pdfTitleElement) pdfTitleElement.style.display = 'none';
+                    // 2. Remove the preparation class
+                    elementToExport.classList.remove('pdf-export-prepare');
+                    // 3. Re-enable button
+                    exportBtn.disabled = false;
+                    exportBtn.innerHTML = `<span class="icon">📄</span><span>Exportar a PDF</span>`;
+                });
+        }
+
+
+        // --- INICIALIZACIÓN ---
+        document.addEventListener('DOMContentLoaded', () => {
+            displayYogiQuote(); // Show initial quote
+
+            // Assign event listeners
+            generateBtn.addEventListener('click', generateInspirations);
+            exportBtn.addEventListener('click', exportToPdf);
+
+            // Set current year in footer
+            if(currentYearSpan) {
+                 currentYearSpan.textContent = `© ${new Date().getFullYear()}`;
+            }
+        });
+
+    </script>
+
+</body>
+</html>
